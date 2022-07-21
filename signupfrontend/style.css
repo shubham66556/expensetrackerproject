@@ -2,16 +2,21 @@
     box-sizing: border-box;
 }
 
-body {
+header{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#mainContainer {
     display: flex;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
     flex-direction: column;
     font-family: "Poppins", sans-serif;
     margin: 0;
     min-height: 100vh;
-    /* text-align: center; */
-    padding: 5rem;
+    
 
     transition: background 0.3s linear, color 0.3s linear;
 }
@@ -29,11 +34,29 @@ table {
  }
 
  .btn {
-    background-color: rgb(51, 153, 76);
+    background-color: rgb(153, 51, 90);
     color: white;
     font-family: inherit;
     padding: 5px;
     border-radius: 5px;
     border: none;
     cursor: pointer;
+    margin:1rem;
+}
+
+#container{
+    position:fixed;
+    bottom:10px;
+    right:10px;
+}
+.notification {
+    background-color: #56CCF2;
+    border-radius: 5px;
+    color: black;
+    padding: 2rem;
+    margin: 1rem;
+}
+
+.notification h4 span{
+    color:rgb(235, 33, 33);
 }

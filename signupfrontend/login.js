@@ -13,7 +13,8 @@ form.addEventListener('submit',(e)=>{
     password.value=''
     axios.post('http://localhost:8000/user/login',obj)
     .then(res=>{
-        alert(res.data.message)
+        localStorage.setItem('token',`${res.data.token}`)
+        window.location.href='../index.html';
     })
     .catch(err=>{
         console.log(err)

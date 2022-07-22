@@ -5,4 +5,5 @@ const sequelize= new Sequelize('expensetracker','root','Bharuchcity6@',{
 
     module.exports = sequelize;
     
+
     

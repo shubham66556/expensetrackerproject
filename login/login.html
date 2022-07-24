@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../public/css/login.css">
+</head>
+<body>
+    <div class="background">
+        <div class="form">
+            <div class="left">
+                <img src="../public/img/login.dc059289.svg" alt="">
+            </div>
+            <form onsubmit="login(event)">
+                <div class="logo">
+                    <img src="../public/img/640145_message_512x512.png" alt=""><p>Chatbook</p>
+                </div>
+                <div class="w-100">
+                    <div class="input-label-div w-100">
+                        <input type="email" name="email" class="inp " required="" placeholder=" " autocomplete="off" value="">
+                        <label class="inp-label" name="email">Email</label>
+                    </div><div class="input-label-div undefined">
+                        <input type="password" name="password" class="inp " required="" placeholder=" " autocomplete="off" value="">
+                        <label class="inp-label" name="password">Password</label>
+                    </div>
+                        <!-- <p>
+                            <a href="../forgotpassword/resetpassword.html">Forgot Password?</a>
+                        </p> -->
+                        <button type="submit">Login</button>
+                        <p>
+                            New User?
+                            <a href="../signup/signup.html">SignUp Here..!</a>
+                        </p>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="./login.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js" integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>

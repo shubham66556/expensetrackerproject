@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage MeChat</title>
+    <link rel="stylesheet" href="./homepage.css">
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <div class="container">
+        <div class="chat-sidebar">
+            <div class="groupnames-container" id="groupnames-container">
+                <h3> Chat Groups</h3>
+                    <ul id="groups-list">
+                        <!-- <li>School Friends</li>
+                        <li> College Friends</li> -->
+                        
+                    </ul>
+                    <button id="open">New Group</button>
+                    <div class="popup-container" id="container">
+                        <div class="popup">
+                            <button id="close" class="button">x</button>
+                            <h3>Enter Group Details</h3>
+                            <form onsubmit="createGroup(event)">
+                                <label for="groupname"></label>
+                                <input type="text" name="groupname" id="groupname-input" placeholder="Group Name..."><br>
+                                <button type="submit" class="group-btn">CreateGroup</button>
+                            </form>
+                            <h3>Enter Members To Group</h3>
+                            <form onsubmit="addMemberToGroup(event)">
+                            <label for="member"></label><br>
+                            <input type="text" name="member" id="groupname-input" placeholder="email@mail.com"><br>
+                            <input type="text" name="groupID" id="groupname-input" placeholder="Enter Group ID"><br>
+                            <button type="submit" class="group-btn">AddMember</button>
+                            </form>
+                            <p>People are annoying and that is why I avoid them</p>
+                        </div>
+                    </div>
+             </div>
+        </div>
+        <div class="chat-container">
+            <div class="header">
+              <div class="logo"> Chat Here</div>
+              <div class="subtext">Connect to people</div>
+            </div>
+            <div class="chat-box" id="chat-box">
+                <ul id="user">
+
+                </ul>
+                <ul id="message">
+            
+                </ul>
+            </div>
+            <div class="input-area" id="input-area">
+                <form id="msg-form" onsubmit="sendmessage(event)">
+                    <label for="message"></label>
+                    <input type="text" name="message" id="text-content" placeholder="Type a message..." required>
+                    <button type="submit" id="send-msg" class="fas fa-paper-plane">Send</button>
+                </form>
+            </div>
+            
+    </div>
+
+    
+    <!-- <ul id="group-list">
+        <li><a href="#">Page</a></li>
+    </ul>
+    <ul id="user">
+    </ul>
+    <ul id="message">
+    </ul>
+    <div class="content">
+        <div class="message-form">
+            <form onsubmit="sendmessage(event)">
+            <label for="message"></label>
+            <input type="text" name="message" id="msg-input" placeholder="Type a message...">
+            <button type="submit">Send</button>
+            </form>
+        </div>
+    </div> -->
+    <script src="./homepage.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js" integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>

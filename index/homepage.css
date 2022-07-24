@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(../public/img/homepage.jpg);
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    min-height: 100vh;
+}
+
+body h1{
+    text-align: center;
+    color: white;
+}
+
+header {
+    background-color: #f0f2f5;
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+    color: #54656f;
+    text-align: center;
+    font-size: x-large;
+    font-weight: bolder;
+}
+
+ul{
+    margin: 1 0 0 -0.8125em;
+    text-align: center;
+    list-style-type: none;
+}
+
+li{
+    margin-bottom: 10px;
+    background-color: #d1f4cc;
+    border-radius: 5px;
+    font-size: large;
+}
+/* .content{
+    position: relative;
+    height: 400px;
+    align-items: center;
+} */
+/* .message-form{
+    display: inline-block;
+    align-items: center;
+    position: absolute;
+    bottom: 0px;
+}
+#msg-input {
+    width: 1100px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+} */
+button{
+    width: 100px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 0;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#open,
+#close {
+    background-color: #54656f;
+    color: white;
+    padding: 1rem 0;
+    border: none;
+    border-radius: 5px;
+    font-family: inherit;
+}
+.popup-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup-container.active {
+    display: flex;
+}
+
+.popup {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    width: 500px;
+    padding: 2rem;
+}
+
+.popup .button {
+    font-size: 1rem;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 1rem;
+}
+
+
+#groupname-input {
+    width: 200px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#group-list li {
+    background-color: white;
+    border: 1px solid black;
+    width: 200px;
+    padding: 12px 20px;
+}
+#group-list li a{
+    color: #54656f;
+    text-decoration: none;
+}

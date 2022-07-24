@@ -1,33 +1,77 @@
-const express=require('express')
-const path=require('path')
-const dotenv=require('dotenv')
-dotenv.config()
-const bodyParser=require('body-parser')
 
-const sequelize=require('./signupbackend/util/database')
+const express = require('express');
+const cors = require('cors');
+const dotenv = require('dotenv');
 
-const cors=require('cors')
+const app = express();
 
-const authRoutes=require('./signupbackend/routes/auth')
-
-const app=express();
-
-app.use(bodyParser.json());
-
-
+dotenv.config();
 
 app.use(cors());
 
-app.use('/user',authRoutes);
+app.use(express.json());
+
+const sequelize = require('./util/database');
+const User = require('./models/user');
+const Message = require('./models/message');
+const Group = require('./models/group');
+const GroupTable = require('./models/grouptable');
+
+const userRoutes = require('./routes/user');
+const chatRoutes = require('./routes/messagetab');
+const groupRoutes = require('./routes/group');
+
+app.use('/user', userRoutes);
+app.use('/chat', chatRoutes);
+app.use('/group', groupRoutes);
+
+app.use((req,res)=>{
+    console.log('hello in app.js');
+    res.status(404).send('<h1>Page Not Found </h1>');
+})
+
+User.hasMany(Message);
+Message.belongsTo(User);
+
+Group.belongsToMany(User, {through:GroupTable});
+User.belongsToMany(Group, {through:GroupTable});
+
+Group.hasMany(Message);
+Message.belongsTo(Group);
 
 
-sequelize.sync()
-.then(()=>{
-    app.listen(8000)
+sequelize
+    // .sync({force:true})
+    .sync()
+    .then(()=>{
+    app.listen(4000);
 })
-.catch(err=>{
-    console.log(err)
+    .catch(err=>{
+    console.log(err);
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
